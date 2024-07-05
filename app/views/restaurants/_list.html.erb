@@ -1,0 +1,9 @@
+<div class="restaurants">
+  <% restaurants.each do |restaurant| %>
+    <%# the code below will render a part restaurant form in views/restaurants/_restaurant.html.erb%>
+    <%= render restaurant %>
+    <p>
+      <%= link_to "Show this restaurant", restaurant %>
+    </p>
+  <% end %>
+</div>

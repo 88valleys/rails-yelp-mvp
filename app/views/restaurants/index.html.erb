@@ -1,0 +1,8 @@
+<p style="color:green"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+# get the list template in views
+<%= render "restaurants/list", restaurants: @restaurants %>
+
+<%= link_to "New restaurant", new_restaurant_path %>

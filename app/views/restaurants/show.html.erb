@@ -1,0 +1,21 @@
+<p style="color:green"><%= notice %></p>
+
+<%= render @restaurant %>
+
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">
+      <p>Review <%= review.id %>
+      </p>
+      <p><%= review.content %></p>
+    <p>Rating:<%= review.rating %>/5</p>
+    </li>
+  <% end %>
+</ul>
+<br>
+
+
+<div><%= link_to "Back to Restaurants", "/restaurants", class: "btn btn-primary"%>
+<%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-warning" %>
+</div>
